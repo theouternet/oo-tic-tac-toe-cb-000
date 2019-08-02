@@ -47,24 +47,24 @@ if @board[position] == " "
 end
 end
 
-def valid_move?(board, position)
- if !position_taken?(board, position) && position <= 8 && position >= 0
+def valid_move?(position)
+ if !position_taken?(position) && position <= 8 && position >= 0
    return true
 end
 end
 
-def turn(board)
+def turn
   puts "Please enter 1-9:"
   user_input = gets.strip
   position = input_to_index(user_input)
   player_token = current_player(board)
 
-    if valid_move?(board, position)
-      move(board, position, player_token)
-      puts display_board(board)
+    if valid_move?(position)
+      move(position, player_token)
+      puts display_board
     else
       puts "Please enter 1-9:"
-      turn(board)
+      turn
       
     end 
 end
