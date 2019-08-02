@@ -57,7 +57,7 @@ def turn
   puts "Please enter 1-9:"
   user_input = gets.strip
   position = input_to_index(user_input)
-  player_token = current_player(board)
+  player_token = current_player
 
     if valid_move?(position)
       move(position, player_token)
