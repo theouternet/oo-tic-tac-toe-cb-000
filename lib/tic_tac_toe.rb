@@ -33,17 +33,17 @@ def move(input_to_index, player_token)
    @board[input_to_index] = player_token
 end
 
-def position_taken?(board, position)
-if board[position] == " " 
-  return board[position] != " "
-  elsif board[position] == ""
-  return board[position] != ""
-  elsif board[position] == nil
-  return board[position] != nil
-  elsif board[position] == "X"
-  return board[position] == "X"
-  elsif board[position] == "O"
-  return board[position] == "O"
+def position_taken?(position)
+if @board[position] == " " 
+  return @board[position] != " "
+  elsif @board[position] == ""
+  return @board[position] != ""
+  elsif @board[position] == nil
+  return @board[position] != nil
+  elsif @board[position] == "X"
+  return @board[position] == "X"
+  elsif @board[position] == "O"
+  return @board[position] == "O"
 end
 end
 
